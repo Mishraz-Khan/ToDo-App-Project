@@ -1,0 +1,165 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url(Images/wallpaperflare.com_wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  padding: 20px;
+}
+
+#main {
+  width: 100%;
+  max-width: 390px;
+  height: 100%;
+  max-height: 550px;
+  border: 1.5px solid #e6b7eca1;
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 32px;
+}
+
+#adding-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#add-bar {
+  border: 1px solid #e6b7eca1;
+  background: transparent;
+  width: 100%;
+  max-width: 260px;
+  padding: 13px 12px;
+  border-radius: 18px;
+  color: #ffff;
+}
+
+#add-bar::placeholder {
+  color: rgb(152, 152, 152);
+}
+
+#add-bar:focus {
+  outline: none;
+}
+
+#add-btn {
+  width: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#add-btn:active {
+  width: 28px;
+  margin-left: 12px;
+}
+
+.task {
+  border: 1.5px solid #e6b7eca1;
+  padding: 10px;
+  list-style: none;
+  padding-left: 34px;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 5px;
+  border-radius: 16px;
+}
+
+.task:hover {
+  background-color: #86379ba1;
+  transition: background-color 0.2s ease, border-color 0.3s ease;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bin {
+  width: 20px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.task::before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  margin-left: -26px;
+  border-radius: 50%;
+  border: 2px solid #e6b7eca1;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  #add-bar {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  #main {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+  }
+
+  #add-btn {
+    width: 25px;
+    margin-left: 8px;
+  }
+
+  #add-btn:active {
+    width: 23px;
+    margin-left: 10px;
+  }
+
+  .task {
+    padding-left: 26px;
+    font-size: 14px;
+  }
+
+  .task::before {
+    height: 12px;
+    width: 12px;
+    margin-left: -22px;
+  }
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.checked::before {
+  border-color: #ffae00;
+  background-color: #ffae00;
+}
